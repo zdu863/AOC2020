@@ -4,7 +4,7 @@ with open('input.txt','r') as f:
 ans=0
 cur=set('abcdefghijklmnopqrstuvwxyz')
 for line in data:
-    if len(line)>0:
+    if line:
         cur&=set(line)
     else:
         ans+=len(cur)

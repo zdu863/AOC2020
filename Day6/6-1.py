@@ -4,9 +4,8 @@ with open('input.txt','r') as f:
 ans=0
 cur=set()
 for line in data:
-    if len(line)>0:
-        for q in line:
-            cur.add(q)
+    if line:
+        cur|=set(line)
     else:
         ans+=len(cur)
         cur.clear()
