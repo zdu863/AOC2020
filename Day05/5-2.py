@@ -1,6 +1,6 @@
 with open('input.txt','r') as f:
     data=f.read().splitlines()    
-    
+
 ids=[]
 for seat in data:
     r,c=seat[:7],seat[-3:]

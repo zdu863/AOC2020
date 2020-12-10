@@ -1,5 +1,4 @@
 import re
-
 def check(f,s):
     if f=='byr':
         return len(s)==4 and 1920<=int(s)<=2002
@@ -23,10 +22,9 @@ def check(f,s):
         
     if f=='pid':
         return len(s)==9 and s.isdigit()
-    
 
 with open('input.txt','r') as f:
-    data=[line for line in f]
+    data=f.read().splitlines()
 data.append(['']) # add an empty line (or the last passport won't be processed)
 
 fields={'byr','iyr','eyr','hgt','hcl','ecl','pid'}

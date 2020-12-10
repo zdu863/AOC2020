@@ -1,6 +1,6 @@
 import re
 with open('input.txt','r') as f:
-    data=[line for line in f]
+    data=f.read().splitlines()
 data.append(['']) # add an empty line (or the last passport won't be processed)
 
 fields={'byr','iyr','eyr','hgt','hcl','ecl','pid'}

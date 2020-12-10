@@ -24,9 +24,8 @@ def run(data):
             i+=1
         else:
             i+=val
-        
     return end,acc
-        
+    
 for i in range(n):
     if data[i][0]=='nop':
         data[i][0]='jmp'
