@@ -29,7 +29,7 @@ while True:
                 grid[i][j]='#'
             elif c=='#' and count>=5:
                 grid[i][j]='L'
-        stable&=(grid[i]==grid_c[i])
+            stable&=(r[j]==grid[i][j])
     if stable:
         break
         
