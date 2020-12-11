@@ -23,16 +23,11 @@ while True:
                 grid[i][j]='#'
             elif c=='#' and count>=4:
                 grid[i][j]='L'
-            stable&=(r[j]==grid[i][j])
+            stable&=(c==grid[i][j])
     if stable:
         break
         
-ans=0
-for i in range(m):
-    for j in range(n):
-        if grid[i][j]=='#':
-            ans+=1
-print(ans)
+print(sum(r.count('#') for r in grid))
     
         
     
