@@ -7,10 +7,10 @@ for i,d in enumerate(data[1].split(',')):
         continue
     b=int(d)
     bus.append(b)    
-    a.append(b-i)
+    a.append(-i)
 
 def bezout(a,b):
-    if a==b+1:
+    if a-b==1:
         return 1,-1
     q,r=a//b,a%b
     m,n=bezout(b,r)

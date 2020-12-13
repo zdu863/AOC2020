@@ -6,7 +6,7 @@ bus=[int(d) for d in data[1].split(',') if d!='x']
 
 w=depart
 for b in bus:
-    wait=(b-depart%b)%b
+    wait=(-depart)%b
     if wait<w:
         w=wait
         id=b
