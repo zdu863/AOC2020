@@ -9,6 +9,6 @@ for b in bus:
     wait=(-depart)%b
     if wait<w:
         w=wait
-        id=b
+        ind=b
         
-print(id*w)
+print(ind*w)
