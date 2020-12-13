@@ -10,8 +10,8 @@ for i,d in enumerate(data[1].split(',')):
     a.append(-i)
 
 def bezout(a,b):
-    if a-b==1:
-        return 1,-1
+    if a%b==0:
+        return 0,1
     q,r=a//b,a%b
     m,n=bezout(b,r)
     return n,m-n*q
@@ -23,6 +23,6 @@ for b in bus:
 ans=0
 for i,b in enumerate(bus):
     m,n=bezout(prod//b,b)
-    ans+=a[i]%b*m*prod//b
+    ans+=a[i]*m*prod//b
 
 print(ans%prod)
