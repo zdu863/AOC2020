@@ -15,8 +15,7 @@ def prnth(s):
 def eva(s,a,b,d):
     i=a
     while i<=b:
-        c=s[i]
-        if c=='(':
+        if s[i]=='(':
             j=d[i]
             s[i:j+1]=[str(eva(s,i+1,j-1,d))]+[None]*(j-i)
             i=j
