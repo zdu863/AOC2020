@@ -23,7 +23,7 @@ def eva(s,a,b,d):
         i+=1
         
     cur,ret=0,1
-    for i,c in enumerate(s[a:b+1],a):
+    for c in s[a:b+1]:
         if c==None:
             continue
         if c.isdigit():
