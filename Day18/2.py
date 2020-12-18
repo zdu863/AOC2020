@@ -17,8 +17,10 @@ def eva(s,a,b,d):
     while i<=b:
         if s[i]=='(':
             j=d[i]
-            s[i:j+1]=[str(eva(s,i+1,j-1,d))]+[None]*(j-i)
-            i=j
+            s[i]=str(eva(s,i+1,j-1,d))
+            while i<j:
+                i+=1
+                s[i]=None
         i+=1
         
     cur,ret=0,1
