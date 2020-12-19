@@ -17,12 +17,13 @@ def length(rule):
     return d_len[rule]
 
 def parts(s,rules):
-    ret,i=True,0
+    i=0
     for n in rules:
         l=length(n)
-        ret&=match(s[i:i+l],n)
+        if not match(s[i:i+l],n):
+            return False
         i+=l
-    return ret and i==len(s)
+    return i==len(s)
     
 def match(s,rule):
     next=d[rule]
@@ -48,7 +49,6 @@ for row,l in enumerate(data):
     d[k]=val
 
 ans=0
-begin=False
 for l in data[row+1:]:
     ans+=match(l,'0')
 print(ans)
