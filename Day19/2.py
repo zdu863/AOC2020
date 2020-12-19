@@ -52,7 +52,7 @@ begin=False
 for l in data[row+1:]:
     if len(l)%8!=0:
         continue
-    nparts=len(l)//8
+    nparts=len(l)//8 # length('42')=length('31')=8
     for i in range(1,nparts//2+nparts%2):
         rules=tuple(['42']*(nparts-i)+['31']*i)
         if parts(l,rules):
