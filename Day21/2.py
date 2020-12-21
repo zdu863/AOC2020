@@ -8,9 +8,9 @@ s_alle=set()
 for line in data:
     line=line.replace('(','').replace(')','')
     ingr,alle=line.split('contains')
-    ingr,alle=ingr.strip().split(),alle.strip().split(', ')
-    s_ingr|=set(ingr)
-    s_alle|=set(alle)
+    ingr,alle=set(ingr.strip().split()),set(alle.strip().split(', '))
+    s_ingr|=ingr
+    s_alle|=alle
     li.append(ingr)
     la.append(alle)
         
@@ -20,7 +20,7 @@ for a in s_alle:
     for i,l in enumerate(la):
         if a not in l:
             continue
-        tmp&=set(li[i])
+        tmp&=li[i]
     d1[a]=list(tmp)
 
 determined=set()
