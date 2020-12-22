@@ -17,7 +17,7 @@ for line in data:
 def play(p1,p2):
     s1,s2=set(),set()
     while p1 and p2:
-        if p1 in s1 and p2 in s2:
+        if p1 in s1 or p2 in s2:
             return True,p1
         s1.add(p1)
         s2.add(p2)
