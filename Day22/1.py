@@ -20,7 +20,9 @@ while p1 and p2:
         p1.extend([c1,c2])
     else:
         p2.extend([c2,c1])
+p=p1 or p2
+
 ans=0
-for i in range(len(p1)):
-    ans+=(i+1)*p1[-(i+1)]
+for i in range(len(p)):
+    ans+=(i+1)*p[-(i+1)]
 print(ans)
