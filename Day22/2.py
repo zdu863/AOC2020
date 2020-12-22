@@ -1,18 +1,8 @@
 with open('input.txt','r') as f:
-    data=f.read().splitlines()
+    d1,d2=f.read().split('\n\n')
 
-p1,p2=[],[]
-f1=True
-for line in data:
-    if not line or line=='Player 1:':
-        continue
-    if line=='Player 2:':
-        f1=False
-        continue
-    if f1:
-        p1.append(int(line))
-    else:
-        p2.append(int(line))
+p1=[int(i) for i in d1.splitlines()[1:]]
+p2=[int(i) for i in d2.splitlines()[1:]]
 
 def play(p1,p2):
     s1,s2=set(),set()
