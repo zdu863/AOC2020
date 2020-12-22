@@ -55,7 +55,7 @@ for l in data[row+1:]:
         continue
     nparts=len(l)//l42                     
     for i in range(1,nparts//2+nparts%2):
-        rules=tuple(['42']*(nparts-i)+['31']*i)
+        rules=['42']*(nparts-i)+['31']*i
         if parts(l,rules):
             ans+=1
             break
